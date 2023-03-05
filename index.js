@@ -23,3 +23,16 @@ function colorOf(r, g, b) {
     g < 16 ? '0' : ''
   }${g.toString(16)}${b < 16 ? '0' : ''}${b.toString(16)}`;
 }
+
+// Training JS #15: Methods of Number object--toFixed(), toExponential() and toPrecision()
+
+function howManySmaller(arr, n) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    let rounded = parseFloat(arr[i].toFixed(2));
+    if (rounded < n) {
+      count++;
+    }
+  }
+  return count;
+}
