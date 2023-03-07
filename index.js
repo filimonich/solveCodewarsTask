@@ -52,3 +52,14 @@ function cutIt(arr) {
   }
   return shortestStringLength;
 }
+
+// Training JS #17: Methods of String object--indexOf(), lastIndexOf() and search()
+
+function firstToLast(str, c) {
+  const firstPos = str.indexOf(c);
+  const lastPos = str.lastIndexOf(c);
+
+  if (firstPos === -1) return -1;
+  if (firstPos === lastPos) return 0;
+  else return lastPos - firstPos;
+}
