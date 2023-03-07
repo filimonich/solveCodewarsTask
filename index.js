@@ -61,5 +61,5 @@ function firstToLast(str, c) {
 
   if (firstPos === -1) return -1;
   if (firstPos === lastPos) return 0;
-  else return lastPos - firstPos;
+  return lastPos - firstPos;
 }
