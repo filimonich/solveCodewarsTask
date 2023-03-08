@@ -63,3 +63,12 @@ function firstToLast(str, c) {
   if (firstPos === lastPos) return 0;
   return lastPos - firstPos;
 }
+
+// Training JS #18: Methods of String object--concat() split() and its good friend join()
+
+function splitAndMerge(str, sep) {
+  return str
+    .split(' ')
+    .map(word => word.split('').join(sep))
+    .join(' ');
+}
