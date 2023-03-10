@@ -81,3 +81,19 @@ function alienLanguage(str) {
     .map(word => word.slice(0, -1).toUpperCase() + word.slice(-1).toLowerCase())
     .join(' ');
 }
+
+// Training JS #20: Methods of String object--charAt() charCodeAt() and fromCharCode()
+
+function topSecret(str) {
+  let decryptedFile = '';
+  for (let i = 0; i < str.length; i++) {
+    let charCode = str.charCodeAt(i);
+    if (charCode >= 65 && charCode <= 90) {
+      charCode = ((charCode - 65 + 23) % 26) + 65;
+    } else if (charCode >= 97 && charCode <= 122) {
+      charCode = ((charCode - 97 + 23) % 26) + 97;
+    }
+    decryptedFile += String.fromCharCode(charCode);
+  }
+  return decryptedFile;
+}
