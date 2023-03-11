@@ -84,13 +84,6 @@ function alienLanguage(str) {
 
 // Training JS #20: Methods of String object--charAt() charCodeAt() and fromCharCode()
 
-// const topSecret = str =>
-//   str.replace(/[a-z]/gi, c =>
-//     String.fromCharCode(c.charCodeAt(0) + (/[abc]/i.test(c) ? 23 : -3))
-//   );
-
-//  /[a-z]/gi  любые буквы английского алфавита в нижнем регистре  g - глобальное сопоставление i - игнорировать регистр
-
 function topSecret(str) {
   let decryptedFile = '';
   for (let i = 0; i < str.length; i++) {
@@ -107,4 +100,8 @@ function topSecret(str) {
   return decryptedFile;
 }
 
-console.log(topSecret('Pb qdph lv Mrkq'));
+// Find out whether the shape is a cube
+
+const cubeChecker = function (volume, side) {
+  return volume > 0 && side > 0 && volume === side ** 3;
+};
