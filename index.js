@@ -84,16 +84,27 @@ function alienLanguage(str) {
 
 // Training JS #20: Methods of String object--charAt() charCodeAt() and fromCharCode()
 
+// const topSecret = str =>
+//   str.replace(/[a-z]/gi, c =>
+//     String.fromCharCode(c.charCodeAt(0) + (/[abc]/i.test(c) ? 23 : -3))
+//   );
+
+//  /[a-z]/gi  любые буквы английского алфавита в нижнем регистре  g - глобальное сопоставление i - игнорировать регистр
+
 function topSecret(str) {
   let decryptedFile = '';
   for (let i = 0; i < str.length; i++) {
     let charCode = str.charCodeAt(i);
-    if (charCode >= 65 && charCode <= 90) {
+    // uppercase letters
+    if (charCode >= 65 && charCode <= 90)
       charCode = ((charCode - 65 + 23) % 26) + 65;
-    } else if (charCode >= 97 && charCode <= 122) {
+    // lowercase letters
+    if (charCode >= 97 && charCode <= 122)
       charCode = ((charCode - 97 + 23) % 26) + 97;
-    }
+
     decryptedFile += String.fromCharCode(charCode);
   }
   return decryptedFile;
 }
+
+console.log(topSecret('Pb qdph lv Mrkq'));
