@@ -105,3 +105,9 @@ function topSecret(str) {
 const cubeChecker = function (volume, side) {
   return volume > 0 && side > 0 && volume === side ** 3;
 };
+
+// Chuck Norris VII - True or False? (Beginner)
+
+function ifChuckSaysSo() {
+  return !true;
+}
