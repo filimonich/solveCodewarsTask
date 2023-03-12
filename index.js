@@ -112,10 +112,8 @@ function ifChuckSaysSo() {
   return !true;
 }
 
-//
+// ES6 string addition
 
 function joinStrings(string1, string2) {
-  const firstString = String(string1);
-  const secondString = String(string2);
-  return `${firstString} ${secondString}`;
+  return `${string1} ${string2}`;
 }
