@@ -111,3 +111,11 @@ const cubeChecker = function (volume, side) {
 function ifChuckSaysSo() {
   return !true;
 }
+
+//
+
+function joinStrings(string1, string2) {
+  const firstString = String(string1);
+  const secondString = String(string2);
+  return `${firstString} ${secondString}`;
+}
