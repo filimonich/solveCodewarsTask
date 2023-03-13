@@ -117,3 +117,9 @@ function ifChuckSaysSo() {
 function joinStrings(string1, string2) {
   return `${string1} ${string2}`;
 }
+
+// Remove String Spaces
+
+function noSpace(x) {
+  return x.replace(/ /g, '');
+}
