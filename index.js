@@ -120,6 +120,10 @@ function joinStrings(string1, string2) {
 
 // Remove String Spaces
 
-function noSpace(x) {
-  return x.replace(/ /g, '');
+const noSpace = x => x.split(' ').join('');
+
+//
+
+function solution(str) {
+  return str.split('').reverse().join('');
 }
