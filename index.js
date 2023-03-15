@@ -122,8 +122,14 @@ function joinStrings(string1, string2) {
 
 const noSpace = x => x.split(' ').join('');
 
-//
+// Reversed Strings
 
-function solution(str) {
-  return str.split('').reverse().join('');
+const solution = str => str.split('').reverse().join('');
+
+// Square(n) Sum
+
+function squareSum(numbers) {
+  return numbers.reduce(function (sum, num) {
+    return sum + num * num;
+  }, 0);
 }
