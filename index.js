@@ -108,9 +108,7 @@ const cubeChecker = function (volume, side) {
 
 // Chuck Norris VII - True or False? (Beginner)
 
-function ifChuckSaysSo() {
-  return !true;
-}
+const ifChuckSaysSo = () => !true;
 
 // ES6 string addition
 
