@@ -131,3 +131,7 @@ function squareSum(numbers) {
     return sum + num * num;
   }, 0);
 }
+
+// Multiply
+
+let multiply = (a, b) => a * b;
