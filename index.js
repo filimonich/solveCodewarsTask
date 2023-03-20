@@ -135,3 +135,7 @@ function squareSum(numbers) {
 // Multiply
 
 let multiply = (a, b) => a * b;
+
+//Reversed Words
+
+let reverseWords = str => str.split(' ').reverse().join(' '); // reverse those words
