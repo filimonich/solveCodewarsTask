@@ -139,3 +139,7 @@ let multiply = (a, b) => a * b;
 //Reversed Words
 
 let reverseWords = str => str.split(' ').reverse().join(' '); // reverse those words
+
+//Keep Hydrated!
+
+let litres = time => Math.floor(time / 2);
