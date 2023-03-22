@@ -143,3 +143,19 @@ let reverseWords = str => str.split(' ').reverse().join(' '); // reverse those w
 //Keep Hydrated!
 
 let litres = time => Math.floor(time / 2);
+
+// Get the mean of an array
+
+let getAverage = arr =>
+  Math.floor(arr.reduce((acc, curr) => acc + curr, 0) / arr.length);
+
+// // Collatz Conjecture (3n+1)
+
+// var hotpo = function (n) {
+//   if (n === 0) return 0; //Optional Handler to n = 0
+//   if (n === 1) return 0;
+//   if (n <= 2) {
+//     if (n % 2 === 0) n = n / 2;
+//     if (n % 2 != 0) n = n * 3 + 1;
+//   }
+// };
