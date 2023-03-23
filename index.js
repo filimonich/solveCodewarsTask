@@ -149,6 +149,10 @@ let litres = time => Math.floor(time / 2);
 let getAverage = arr =>
   Math.floor(arr.reduce((acc, curr) => acc + curr, 0) / arr.length);
 
+// My head is at the wrong end!
+
+let fixTheMeerkat = arr => arr.reverse();
+
 // // Collatz Conjecture (3n+1)
 
 // var hotpo = function (n) {
