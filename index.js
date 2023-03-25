@@ -153,7 +153,7 @@ let getAverage = arr =>
 
 let fixTheMeerkat = arr => arr.reverse();
 
-//
+// Count the Monkeys!
 
 function monkeyCount(n) {
   const result = [];
