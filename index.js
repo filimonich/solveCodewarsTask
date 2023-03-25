@@ -153,6 +153,16 @@ let getAverage = arr =>
 
 let fixTheMeerkat = arr => arr.reverse();
 
+//
+
+function monkeyCount(n) {
+  const result = [];
+  for (let i = 1; i <= n; i++) {
+    result.push(i);
+  }
+  return result;
+}
+
 // // Collatz Conjecture (3n+1)
 
 // var hotpo = function (n) {
