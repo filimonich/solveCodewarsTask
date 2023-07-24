@@ -173,3 +173,46 @@ function monkeyCount(n) {
 //     if (n % 2 != 0) n = n * 3 + 1;
 //   }
 // };
+
+// Quarter of the year
+
+const quarterOf = month => {
+  if (month >= 0 && month <= 3) return 1;
+  if (month >= 3 && month <= 6) return 2;
+  if (month >= 6 && month <= 9) return 3;
+  if (month >= 9 && month <= 12) return 4;
+};
+
+// Remove String Spaces // the second solution
+
+function noSpace(x) {
+  return x.replace(/\s+/g, '');
+}
+
+// Capitalization and Mutability
+
+function capitalizeWord(word) {
+  let wordUpper = word[0].toUpperCase();
+  for (let i = 1; i < word.length; i++) {
+    wordUpper += word[i];
+  }
+  return wordUpper;
+}
+
+// Century From Year
+
+function century(year) {
+  return Math.ceil(year / 100)
+ }
+
+ // Convert a Number to a String!
+
+ function numberToString(num) {
+  return num.toString()
+ }
+
+ // Convert a String to a Number!
+
+ const stringToNumber = function(str){
+  return +str;
+}
