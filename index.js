@@ -185,9 +185,9 @@ const quarterOf = month => {
 
 // Remove String Spaces // the second solution
 
-function noSpace(x) {
-  return x.replace(/\s+/g, '');
-}
+// function noSpace(x) {
+//   return x.replace(/\s+/g, '');
+// }
 
 // Capitalization and Mutability
 
@@ -202,17 +202,41 @@ function capitalizeWord(word) {
 // Century From Year
 
 function century(year) {
-  return Math.ceil(year / 100)
- }
+  return Math.ceil(year / 100);
+}
 
- // Convert a Number to a String!
+// Convert a Number to a String!
 
- function numberToString(num) {
-  return num.toString()
- }
+function numberToString(num) {
+  return num.toString();
+}
 
- // Convert a String to a Number!
+// Convert a String to a Number!
 
- const stringToNumber = function(str){
+const stringToNumber = function (str) {
   return +str;
+};
+
+// Convert to Binary
+
+function toBinary(n) {
+  return +n.toString(2);
+}
+
+// Even or Odd
+
+function evenOrOdd(number) {
+  let numberOr = number % 2;
+  return numberOr === 0 ? 'Even' : 'Odd';
+}
+
+// Fake Binary
+
+function fakeBin(x) {
+  let xResult = '';
+  for (let i = 0; i < x.length; i++) {
+    if (parseInt(x[i]) < 5) xResult += '0';
+    else xResult += '1';
+  }
+  return xResult;
 }
