@@ -412,7 +412,7 @@ function typeOfSum(a, b) {
   return typeof (a + b);
 }
 
-// 
+// Will you make it?
 
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   return mpg * fuelLeft >= distanceToPump;
