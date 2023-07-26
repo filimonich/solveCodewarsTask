@@ -240,3 +240,180 @@ function fakeBin(x) {
   }
   return xResult;
 }
+
+// Function 1 - hello world
+
+let greet = () => 'hello world!';
+
+// let greet = function () {
+//   return 'hello world!';
+// };
+
+// Largest Square Inside A Circle
+
+function areaLargestSquare(r) {
+  return r ** 2 * 2;
+}
+
+// Number of Decimal Digits
+
+function digits(n) {
+  return n.toString().length;
+}
+
+// Opposite number
+
+function opposite(number) {
+  return (number = number ? -number : number);
+}
+
+// Perimeter sequence
+
+function perimeterSequence(a, n) {
+  return a * 4 * n;
+}
+
+// Remove First and Last Character
+
+function removeChar(str) {
+  return str.slice(1, -1);
+}
+
+// String ends with?
+
+function solution2(str, ending) {
+  let i = ending.length;
+  let strEnd = str.slice(-i);
+  return strEnd === ending ? true : ending === '' ? true : false;
+}
+
+// Simple multiplication
+
+function simpleMultiplication(number) {
+  let numberEven = number % 2;
+  return numberEven === 0 ? number * 8 : number * 9;
+}
+
+// String repeat
+
+function repeatStr(n, s) {
+  let result = '';
+  for (i = 0; i < n; i++) {
+    result += s;
+  }
+  return result;
+}
+
+// Student's Final Grade
+
+function finalGrade(exam, projects) {
+  if (exam > 90 || projects > 10) return 100;
+  if (exam > 75 && projects >= 5) return 90;
+  if (exam > 50 && projects >= 2) return 75;
+  else return 0;
+}
+
+// Switch it Up!
+
+// function switchItUp(number) {
+//   let numberCheck =
+//     number === 1
+//       ? 'One'
+//       : number === 2
+//       ? 'Two'
+//       : number === 3
+//       ? 'Three'
+//       : number === 4
+//       ? 'Four'
+//       : number === 5
+//       ? 'Five'
+//       : number === 6
+//       ? 'Six'
+//       : number === 7
+//       ? 'Seven'
+//       : number === 8
+//       ? 'Eight'
+//       : number === 9
+//       ? 'Nine'
+//       : 'Zero';
+//   return numberCheck;
+// }
+
+function switchItUp(number) {
+  let numberCheck;
+  switch (number) {
+    case 1:
+      numberCheck = 'One';
+      break;
+    case 2:
+      numberCheck = 'Two';
+      break;
+    case 3:
+      numberCheck = 'Three';
+      break;
+    case 4:
+      numberCheck = 'Four';
+      break;
+    case 5:
+      numberCheck = 'Five';
+      break;
+    case 6:
+      numberCheck = 'Six';
+      break;
+    case 7:
+      numberCheck = 'Seven';
+      break;
+    case 8:
+      numberCheck = 'Eight';
+      break;
+    case 9:
+      numberCheck = 'Nine';
+      break;
+    default:
+      numberCheck = 'Zero';
+  }
+  return numberCheck;
+}
+
+// Thinkful - Logic Drills: Traffic light
+
+function updateLight(currentLight) {
+  switch (currentLight) {
+    case 'green':
+      return 'yellow';
+    case 'yellow':
+      return 'red';
+    default:
+      return 'green';
+  }
+}
+
+// Third Angle of a Triangle
+
+function otherAngle(a, b) {
+  return 180 - a - b;
+}
+
+// Transportation on vacation
+
+function rentalCarCost(d) {
+  let cost = d * 40;
+  if (d >= 7) {
+    cost -= 50;
+  } else if (d >= 3) {
+    cost -= 20;
+  }
+  return cost;
+}
+
+// Type of sum
+
+function typeOfSum(a, b) {
+  return typeof (a + b);
+}
+
+//
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return mpg * fuelLeft >= distanceToPump;
+};
