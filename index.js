@@ -420,7 +420,7 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 
 // Take an Arrow to the knee, Functionally
 
-var ArrowFunc = function(arr) {
+const arrowFunc = function(arr) {
   let result = '';
   for (let num of arr) {
     result += String.fromCharCode(num);
