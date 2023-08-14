@@ -417,3 +417,14 @@ function typeOfSum(a, b) {
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   return mpg * fuelLeft >= distanceToPump;
 };
+
+// Take an Arrow to the knee, Functionally
+
+var ArrowFunc = function(arr) {
+  let result = '';
+  for (let num of arr) {
+    result += String.fromCharCode(num);
+  }
+  return result;
+}
+
