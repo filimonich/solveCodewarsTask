@@ -420,11 +420,52 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 
 // Take an Arrow to the knee, Functionally
 
-const ArrowFunc = function(arr) {
+const ArrowFunc = function (arr) {
   let result = '';
   for (let num of arr) {
     result += String.fromCharCode(num);
   }
   return result;
-}
+};
 
+// Merge two sorted arrays into one
+
+function mergeArrays(arr1, arr2) {
+  const result = [];
+
+  for (let i = 0; i < arr1.length; i++) {
+    result.push(arr1[i]);
+  }
+
+  for (let i = 0; i < arr2.length; i++) {
+    result.push(arr2[i]);
+  }
+
+  for (let i = 0; i < result.length; i++) {
+    for (let j = i + 1; j < result.length; j++) {
+      if (result[i] > result[j]) {
+        const temp = result[i];
+        result[i] = result[j];
+        result[j] = temp;
+      }
+    }
+  }
+
+  let index = 0;
+  let uniqueIndex = 0;
+
+  for (index = 0; index < result.length; index++) {
+    if (result[index] !== result[uniqueIndex]) {
+      uniqueIndex++;
+      result[uniqueIndex] = result[index];
+    }
+  }
+
+  uniqueIndex++;
+
+  for (let i = result.length - 1; i >= uniqueIndex; i--) {
+    result.pop();
+  }
+  
+  return result;
+}
