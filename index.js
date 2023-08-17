@@ -466,6 +466,29 @@ function mergeArrays(arr1, arr2) {
   for (let i = result.length - 1; i >= uniqueIndex; i--) {
     result.pop();
   }
-  
+
   return result;
 }
+
+// 16+18=214
+
+function add(num1, num2) {
+  let num1String = num1.toString();
+  let num2String = num2.toString();
+
+  let maxLength = Math.max(num1String.length, num2String.length);
+
+  num1String = num1String.padStart(maxLength, '0');
+  num2String = num2String.padStart(maxLength, '0');
+
+  let resultString = '';
+  for (let i = 0; i < maxLength; i++) {
+    const digit1 = parseInt(num1String[i]);
+    const digit2 = parseInt(num2String[i]);
+    resultString += (digit1 + digit2).toString();
+  }
+
+  return parseInt(resultString);
+}
+
+
