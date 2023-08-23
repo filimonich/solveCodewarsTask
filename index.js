@@ -491,4 +491,8 @@ function add(num1, num2) {
   return parseInt(resultString);
 }
 
+// Add property to every object in array
 
+for (let i = 0; i < questions.length; i++) {
+  questions[i].usersAnswer = null;
+}
