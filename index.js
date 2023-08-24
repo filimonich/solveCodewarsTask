@@ -496,3 +496,15 @@ function add(num1, num2) {
 for (let i = 0; i < questions.length; i++) {
   questions[i].usersAnswer = null;
 }
+
+// Colour Association
+
+function colourAssociation(array) {
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    let obj = {};
+    obj[array[i][0]] = array[i][1];
+    result.push(obj);
+  }
+  return result;
+}
