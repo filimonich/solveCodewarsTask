@@ -508,3 +508,20 @@ function colourAssociation(array) {
   }
   return result;
 }
+
+// 
+
+function combine() {
+  let result = {};
+  for (let i = 0; i < arguments.length; i++) {
+    let obj = arguments[i];
+    for (let key in obj) {
+      if (result.hasOwnProperty(key)) {
+        result[key] += obj[key];
+      } else {
+        result[key] = obj[key];
+      }
+    }
+  }
+  return result;
+}
