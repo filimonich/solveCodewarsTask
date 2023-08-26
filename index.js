@@ -509,7 +509,7 @@ function colourAssociation(array) {
   return result;
 }
 
-// 
+// Combine objects
 
 function combine() {
   let result = {};
@@ -524,4 +524,17 @@ function combine() {
     }
   }
   return result;
+}
+
+// Count the Digit
+
+function nbDig(n, d) {
+  let count = 0;
+  for (let k = 0; k <= n; k++) {
+    let square = k * k;
+    let digits = square.toString().split('');
+    let filteredDigits = digits.filter(digit => digit === d.toString());
+    count += filteredDigits.length;
+  }
+  return count;
 }
