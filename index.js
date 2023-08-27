@@ -538,3 +538,18 @@ function nbDig(n, d) {
   }
   return count;
 }
+
+// Find the missing element between two arrays
+
+function findMissing(arr1, arr2) {
+  const initialValue = 0;
+  let sum1 = arr1.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue
+  );
+  let sum2 = arr2.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue
+  );
+  return sum1 - sum2;
+}
