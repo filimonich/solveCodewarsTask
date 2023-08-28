@@ -553,3 +553,9 @@ function findMissing(arr1, arr2) {
   );
   return sum1 - sum2;
 }
+
+//
+
+function getDecimal(n) {
+  return Math.abs(n % 1);
+}
