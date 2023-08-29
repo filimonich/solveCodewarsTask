@@ -554,8 +554,21 @@ function findMissing(arr1, arr2) {
   return sum1 - sum2;
 }
 
-//
+// Get decimal part of the given number
 
 function getDecimal(n) {
   return Math.abs(n % 1);
+}
+
+// Maximum Triplet Sum (Array Series #7)
+
+function maxTriSum(numbers) {
+  const uniqueNumbers = [...new Set(numbers)];
+
+  const sortedNumbers = uniqueNumbers.sort((a, b) => b - a);
+
+  const sumOfMaxNumbers =
+    sortedNumbers[0] + sortedNumbers[1] + sortedNumbers[2];
+
+  return sumOfMaxNumbers;
 }
