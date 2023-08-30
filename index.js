@@ -572,3 +572,77 @@ function maxTriSum(numbers) {
 
   return sumOfMaxNumbers;
 }
+
+// Whose bicycle?
+
+function whoseBicycle(diary1, diary2, diary3) {
+  const ageTable = { // удалить
+    firstSonAge: 14,
+    secondSonAge: 9,
+    thirdSonAge: 8,
+  };
+
+  let firstSonSum = 0;
+  let secondSonSum = 0;
+  let thirdSonSum = 0;
+
+  for (let subject in diary1) {
+    firstSonSum += diary1[subject];
+  }
+
+  for (let subject in diary2) {
+    secondSonSum += diary2[subject];
+  }
+
+  for (let subject in diary3) {
+    thirdSonSum += diary3[subject];
+  }
+
+  console.log(firstSonSum);
+  console.log(secondSonSum);
+  console.log(firstSonSum);
+  console.log(thirdSonSum);
+  console.log(ageTable['firstSonAge']);
+  console.log(ageTable['secondSonAge']);
+  console.log(ageTable['firstSonAge']);
+  console.log(ageTable['thirdSonAge']);
+  if (firstSonSum > secondSonSum && firstSonSum > thirdSonSum) {
+    return 'I need to buy a bicycle for my first son.';
+  } else if (secondSonSum > firstSonSum && secondSonSum > thirdSonSum) {
+    return 'I need to buy a bicycle for my second son.';
+  } else if (thirdSonSum > firstSonSum && thirdSonSum > secondSonSum) {
+    return 'I need to buy a bicycle for my third son.';
+  } else if (firstSonSum === secondSonSum && firstSonSum === thirdSonSum) {
+    if (
+      ageTable['firstSonAge'] < ageTable['secondSonAge'] &&
+      ageTable['firstSonAge'] < ageTable['thirdSonAge']
+    ) {
+      return 'I need to buy a bicycle for my first son.';
+    } else if (
+      ageTable['secondSonAge'] < ageTable['firstSonAge'] &&
+      ageTable['secondSonAge'] < ageTable['thirdSonAge']
+    ) {
+      return 'I need to buy a bicycle for my second son.';
+    } else {
+      return 'I need to buy a bicycle for my third son.';
+    }
+  } else if (firstSonSum === secondSonSum) {
+    if (ageTable['firstSonAge'] < ageTable['secondSonAge']) {
+      return 'I need to buy a bicycle for my first son.';
+    } else {
+      return 'I need to buy a bicycle for my second son.';
+    }
+  } else if (firstSonSum === thirdSonSum) {
+    if (ageTable['firstSonAge'] < ageTable['thirdSonAge']) {
+      return 'I need to buy a bicycle for my first son.';
+    } else {
+      return 'I need to buy a bicycle for my third son.';
+    }
+  } else if (secondSonSum === thirdSonSum) {
+    if (ageTable['secondSonAge'] < ageTable['thirdSonAge']) {
+      return 'I need to buy a bicycle for my second son.';
+    } else {
+      return 'I need to buy a bicycle for my third son.';
+    }
+  }
+}
