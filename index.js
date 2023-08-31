@@ -646,3 +646,17 @@ function whoseBicycle(diary1, diary2, diary3) {
     }
   }
 }
+
+// Nickname Generator
+
+function nicknameGenerator(name){
+  if (name.length <= 3) {
+      return "Error: Name too short";
+  }
+  let vowels = "";
+  if (vowels.includes(name[2])) {
+      return name.slice(0, 4);
+  } else {
+      return name.slice(0, 3);
+  }
+}
