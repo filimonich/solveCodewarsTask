@@ -576,7 +576,8 @@ function maxTriSum(numbers) {
 // Whose bicycle?
 
 function whoseBicycle(diary1, diary2, diary3) {
-  const ageTable = { // удалить
+  const ageTable = {
+    // удалить
     firstSonAge: 14,
     secondSonAge: 9,
     thirdSonAge: 8,
@@ -649,23 +650,23 @@ function whoseBicycle(diary1, diary2, diary3) {
 
 // Nickname Generator
 
-function nicknameGenerator(name){
+function nicknameGenerator(name) {
   if (name.length <= 3) {
-      return "Error: Name too short";
+    return 'Error: Name too short';
   }
-  let vowels = "";
+  let vowels = '';
   if (vowels.includes(name[2])) {
-      return name.slice(0, 4);
+    return name.slice(0, 4);
   } else {
-      return name.slice(0, 3);
+    return name.slice(0, 3);
   }
 }
 
-// 
+// Odd-Even String Sort
 
 function sortMyString(S) {
-  let evenIndexedChars = "";
-  let oddIndexedChars = "";
+  let evenIndexedChars = '';
+  let oddIndexedChars = '';
   for (let i = 0; i < S.length; i++) {
     if (i % 2 === 0) {
       evenIndexedChars += S[i];
