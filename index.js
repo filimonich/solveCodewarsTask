@@ -660,3 +660,18 @@ function nicknameGenerator(name){
       return name.slice(0, 3);
   }
 }
+
+// 
+
+function sortMyString(S) {
+  let evenIndexedChars = "";
+  let oddIndexedChars = "";
+  for (let i = 0; i < S.length; i++) {
+    if (i % 2 === 0) {
+      evenIndexedChars += S[i];
+    } else {
+      oddIndexedChars += S[i];
+    }
+  }
+  return `${evenIndexedChars} ${oddIndexedChars}`;
+}
