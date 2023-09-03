@@ -691,3 +691,27 @@ function isPowerOfTwo(n) {
   }
   return isPowerOfTwo(n / 2);
 }
+
+// String Reordering
+
+function sentence(List) {
+  let pairs = [];
+  for (let i = 0; i < List.length; i++) {
+    let key;
+    let value;
+    for (let k in List[i]) {
+      key = k;
+      value = List[i][k];
+    }
+    pairs.push([parseInt(key), value]);
+  }
+  pairs.sort((a, b) => a[0] - b[0]);
+  let sentence = '';
+  for (let i = 0; i < pairs.length; i++) {
+    sentence += pairs[i][1] + ' ';
+  }
+  if (sentence.length > 0) {
+    sentence = sentence.slice(0, -1);
+  }
+  return sentence;
+}
