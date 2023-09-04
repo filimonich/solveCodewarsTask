@@ -715,3 +715,17 @@ function sentence(List) {
   }
   return sentence;
 }
+
+//
+
+function minSum(arr) {
+  arr.sort((a, b) => a - b);
+
+  let minSum = 0;
+
+  for (let left = 0, right = arr.length - 1; left < right; left++, right--) {
+    minSum += arr[left] * arr[right];
+  }
+
+  return minSum;
+}
