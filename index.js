@@ -716,7 +716,7 @@ function sentence(List) {
   return sentence;
 }
 
-//
+// Minimize Sum Of Array (Array Series #1)
 
 function minSum(arr) {
   arr.sort((a, b) => a - b);
@@ -728,4 +728,21 @@ function minSum(arr) {
   }
 
   return minSum;
+}
+
+// Unpacking Arguments
+
+function spread(func, args) {
+  switch (args.length) {
+    case 0:
+      return func();
+    case 1:
+      return func(args[0]);
+    case 2:
+      return func(args[0], args[1]);
+    case 3:
+      return func(args[0], args[1], args[2]);
+    case 4:
+      return func(args[0], args[1], args[2], args[3]);
+  }
 }
