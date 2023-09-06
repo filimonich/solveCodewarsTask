@@ -746,3 +746,18 @@ function spread(func, args) {
       return func(args[0], args[1], args[2], args[3]);
   }
 }
+
+// Vowel one
+
+function vowelOne(s) {
+  const vowels = 'aeiouAEIOU';
+  let result = '';
+  for (let i = 0; i < s.length; i++) {
+    if (vowels.indexOf(s[i]) !== -1) {
+      result += '1';
+    } else {
+      result += '0';
+    }
+  }
+  return result;
+}
