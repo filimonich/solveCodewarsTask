@@ -761,3 +761,20 @@ function vowelOne(s) {
   }
   return result;
 }
+
+// Who is the killer?
+
+function killer(suspectInfo, dead) {
+  for (let suspect in suspectInfo) {
+    let sawAll = true;
+    for (let i = 0; i < dead.length; i++) {
+      if (!suspectInfo[suspect].includes(dead[i])) {
+        sawAll = false;
+        break;
+      }
+    }
+    if (sawAll) {
+      return suspect;
+    }
+  }
+}
