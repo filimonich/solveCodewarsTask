@@ -778,3 +778,16 @@ function killer(suspectInfo, dead) {
     }
   }
 }
+
+// Data Reverse
+
+function dataReverse(data) {
+  let segmentLength = 8;
+  let result = [];
+  for (let i = data.length - segmentLength; i >= 0; i -= segmentLength) {
+    for (let j = i; j < i + segmentLength; j++) {
+      result.push(data[j]);
+    }
+  }
+  return result;
+}
