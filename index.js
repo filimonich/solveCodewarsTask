@@ -785,8 +785,8 @@ function dataReverse(data) {
   let segmentLength = 8;
   let result = [];
   for (let i = data.length - segmentLength; i >= 0; i -= segmentLength) {
-    for (let j = i; j < i + segmentLength; j++) {
-      result.push(data[j]);
+    for (let bitIndex = i; bitIndex < i + segmentLength; bitIndex++) {
+      result.push(data[bitIndex]);
     }
   }
   return result;
