@@ -791,3 +791,17 @@ function dataReverse(data) {
   }
   return result;
 }
+
+// Count strings in objects
+
+function strCount(obj) {
+  let count = 0;
+  for (let key in obj) {
+    if (typeof obj[key] === 'string') {
+      count++;
+    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+      count += strCount(obj[key]);
+    }
+  }
+  return count;
+}
